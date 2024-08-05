@@ -7,11 +7,11 @@ Gender	should be only 'Male' or 'Female'	Gender of the Shopper. It cannot be mor
 MobileNo	NOT NULL	Mobile number of the Shopper in numeric form. Characters like brackets and hyphens are not allowed.
 Address		Address of the Shopper. It cannot be more than 50 characters. For ex. Allen Street, New York
 '''
-create table shopper
-(
-shopperid integer primary key,
-shoppername varchar2(20) not null,
-gender char(6) check (gender in('Male','Female')),
-mobileno integer not null,
-address varchar2(50)
-)
+create table shopper(
+Shopperid NUMBER PRIMARY KEY,
+ShopperName VARCHAR2(20) NOT NULL,
+Gender CHAR(6) CHECK (Gender in('Male','Female')),
+MobileNo NUMBER NOT NULL,
+Address VARCHAR2(50)
+);
+---instead of integer use number datatype
